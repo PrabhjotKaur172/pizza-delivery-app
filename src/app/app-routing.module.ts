@@ -25,6 +25,16 @@ const routes: Routes = [{
       path: 'pizzaMenuItemDetail',
       loadChildren: () => import('./features/pizzaMenuItemDetail/pizza-menu-item-detail.module').then(m => m.PizzaMenuItemDetailModule)
 
+    },
+    {
+      path: 'about',
+      loadChildren: () => import('./features/about/about-pizza.module').then(m => m.AboutPizzaDeliveryModule)
+
+    },
+    {
+      path: 'contact',
+      loadChildren: () => import('./features/contact/contact-pizza.module').then(m => m.ContactPizzaDeliveryModule)
+
     }
   ]
 },
