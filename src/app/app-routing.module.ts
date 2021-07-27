@@ -10,7 +10,17 @@ const routes: Routes = [{
       path: '',
       loadChildren: () => import('./features/home/home-pizza-delivery.module').then(m => m.HomePizzaDeliveryModule)
 
-    }
+    },
+    {
+      path: 'pizzaMenu',
+      loadChildren: () => import('./features/pizzaMenu/pizza-menu.module').then(m => m.PizzaMenuDeliveryModule)
+
+    },
+    {
+      path: 'pizzaCart',
+      loadChildren: () => import('./features/pizzaCart/pizza-cart.module').then(m => m.PizzaCartDeliveryModule)
+
+    },
   ]
 },
 ];
