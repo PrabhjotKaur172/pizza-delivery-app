@@ -10,5 +10,25 @@ export class AppHeaderPizzaDeliveryComponent{
 
   constructor(private router: Router){}
 
+    //navigate user to all products page
+openMenuPage() {
+  this.router.navigate(['/pizzaMenu/menu']);
+}
+
+openMenuDetailsPage(){
+  this.router.navigate(['/pizzaMenuItemDetail/itemDetail']);
+}
+
+openCartPage(){
+  this.router.navigate(['/pizzaCart/cart']);
+}
+
+openAboutPage(){
+  this.router.navigate(['/about/aboutPizzaDelivery']);
+}
+
+openContactPage(){
+  this.router.navigate(['/contact/contactPizzaDelivery']);
+}
 
 }

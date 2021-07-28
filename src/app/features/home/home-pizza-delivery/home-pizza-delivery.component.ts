@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { productsData } from './../../../data/products';
 
 @Component({
   selector: 'app-home-pizza-delivery',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-pizza-delivery.component.css']
 })
 export class HomePizzaDeliveryComponent implements OnInit {
-
-  constructor() { }
+  public pizzaDetails;
+  constructor() { 
+    this.pizzaDetails = productsData;
+  }
 
   ngOnInit(): void {
   }

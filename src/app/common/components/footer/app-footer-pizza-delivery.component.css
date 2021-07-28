@@ -1,1 +1,59 @@
-/* footer css */
+
+/* Footer CSS */
+
+.bg-black {
+    background-color: #131517!important;
+}
+.margin-50 {
+    margin-left: 50%;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #e6a038 !important;
+    font-weight: bold !important;
+}
+.img-width{
+    width: 100%;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.div-bg{
+    background-color: black;
+    color: white;
+    padding : 20px;
+}
+.div-bg-yellow{
+    background-color: #e6a038;
+    padding : 20px;
+}
+.padding-left-zero{
+    padding-left: 0 !important;
+}
+.padding-right-zero{
+    padding-right: 0 !important;
+}
+.margin-b-30{
+    margin-bottom: 30px;
+}
+.menu-heading{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.customise{
+    margin-right: 20px;
+    font-weight: bold;
+}
+.category{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+.bg-color-black{
+    background-color: black;
+}
+
+.footer-css{
+    padding-top: 20px;
+    color: white;
+}
