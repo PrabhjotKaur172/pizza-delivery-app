@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { productsData } from './../../../data/products';
 
 @Component({
@@ -6,13 +7,19 @@ import { productsData } from './../../../data/products';
   templateUrl: './home-pizza-delivery.component.html',
   styleUrls: ['./home-pizza-delivery.component.css']
 })
-export class HomePizzaDeliveryComponent implements OnInit {
+export class HomePizzaDeliveryComponent{
   public pizzaDetails;
-  constructor() { 
+  constructor(private router: Router) { 
     this.pizzaDetails = productsData;
   }
 
-  ngOnInit(): void {
+  openMenuPage() {
+    this.router.navigate(['/pizzaMenu/menu']);
   }
 
+  openMenuDetailsPage(){
+    this.router.navigate(['/pizzaMenuItemDetail/itemDetail']);
+  }
+  
+  
 }

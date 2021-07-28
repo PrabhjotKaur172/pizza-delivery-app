@@ -12,7 +12,7 @@
               <div class="carousel-caption text-left">
                 <h1>Delicious Italian Cousine</h1>
                 <p>You gonna Love it !!</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Our Menu</a></p>
+                <p><a class="btn btn-lg btn-primary"  (click)="openMenuPage()" role="button">Our Menu</a></p>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
               <div class="carousel-caption">
                 <h1>Delicious Italian Cousine</h1>
                 <p>You gonna Love it !!</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Our Menu</a></p>
+                <p><a class="btn btn-lg btn-primary"  (click)="openMenuPage()" role="button">Our Menu</a></p>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="carousel-caption text-right">
                 <h1>Delicious Italian Cousine</h1>
                 <p>You gonna Love it !!</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Our Menu</a></p>
+                <p><a class="btn btn-lg btn-primary"  (click)="openMenuPage()" role="button">Our Menu</a></p>
               </div>
             </div>
           </div>
@@ -100,13 +100,9 @@
       </div>
 
 
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <!-- Menu Section starts-->
 
       <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-md-12">
             <p class="menu-heading">OUR MENU</p>
@@ -117,7 +113,7 @@
             <img class="" src="./../../../../assets/images/pizza-1.jpg" alt="{{p.pizza_details}}" width="300" height="300">
             <h4>{{p.pizza_name}}</h4>
             <p>Large 13.5" &euro;{{p.pizza_price}}</p>
-            <p><a href="#" class="customise">CUSTOMISE</a> <a class="btn btn-secondary" href="#" role="button">ADD</a></p>
+            <p><a (click)="openMenuDetailsPage()" class="customise">CUSTOMISE</a> <a class="btn btn-secondary" href="#" role="button">ADD</a></p>
           </div>
 
           <div class="col-md-12 category">Our Sides</div>
@@ -136,3 +132,5 @@
         </div>
       </div>
     </main>
+
+     <!-- Menu Section ends-->
