@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userService';
 
 @Component({
@@ -16,7 +17,8 @@ export class UserLoginComponent implements OnInit {
 
   }
 
-  constructor(private user: UserService) { }
+  constructor(private user: UserService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,9 +27,17 @@ export class UserLoginComponent implements OnInit {
   loginUser(userLoginObject: any) {
     this.user.loginUser(userLoginObject).subscribe(res => {
       if (res) {
-        alert(res);
+        if(res != ("User not found" || "Please enter required fields")){
+          this.router.navigate(['/']);
+
+          //save data in local storage
+            localStorage.setItem('userCredentials', JSON.stringify(res));
+            console.log(res);
+        }
+        
       }
     });
+    
   }
 
 }

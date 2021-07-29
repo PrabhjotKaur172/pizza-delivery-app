@@ -12,7 +12,7 @@
               <div class="carousel-caption text-left">
                 <h1>Delicious Italian Cousine</h1>
                 <p>You gonna Love it !!</p>
-                <p><a class="btn btn-lg btn-primary"  (click)="openMenuPage()" role="button">Our Menu</a></p>
+                <p><a class="btn btn-lg btn-primary btn-yellow"  (click)="openMenuPage()" role="button">Our Menu</a></p>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
               <div class="carousel-caption">
                 <h1>Delicious Italian Cousine</h1>
                 <p>You gonna Love it !!</p>
-                <p><a class="btn btn-lg btn-primary"  (click)="openMenuPage()" role="button">Our Menu</a></p>
+                <p><a class="btn btn-lg btn-primary btn-yellow"  (click)="openMenuPage()" role="button">Our Menu</a></p>
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               <div class="carousel-caption text-right">
                 <h1>Delicious Italian Cousine</h1>
                 <p>You gonna Love it !!</p>
-                <p><a class="btn btn-lg btn-primary"  (click)="openMenuPage()" role="button">Our Menu</a></p>
+                <p><a class="btn btn-lg btn-primary btn-yellow"  (click)="openMenuPage()" role="button">Our Menu</a></p>
               </div>
             </div>
           </div>
@@ -74,8 +74,8 @@
         <div class="col-md-4 display-inline-block div-bg-yellow">
             <div class="icon"><span class="icon-phone"></span></div>
             <div class="text">
-            <h6>000 (123) 456 7890</h6>
-            <p>A small river named Duden flows</p>
+            <h6>Pizza Delicious</h6>
+            <p>You Gonna Love it !</p>
             </div>
         </div>
       </div>
@@ -86,9 +86,9 @@
             </div>
             <div class="col-md-6 display-inline-block">
                 <h2>WELCOME TO A PIZZA RESTAURANT</h2>
-                <p>Domino's Pizza Group is the UK’s leading pizza brand and a major player in the Republic of Ireland.
+                <p>Pizza Delicious Group is the UK’s leading pizza brand and a major player in the Republic of Ireland.
                     We’re passionate about becoming the number one pizza company in the world and in every neighbourhood.
-                    From the UK’s first Domino’s store in Luton in 1985 to over 1,200 stores across the UK and Republic of Ireland.
+                    From the UK’s first Pizza Delicious's store in Luton in 1985 to over 1,200 stores across the UK and Republic of Ireland.
                     Our relentless focus on growth sees us introduce our freshly handcrafted pizzas to more customers around the world every day.
                 </p>
             </div>
@@ -114,21 +114,21 @@
             <h4>{{pizza.name}}</h4>
             <p>Large 13.5" &euro;{{pizza.price}}</p>
             <p><a (click)="openMenuDetailsPage()" class="customise cursor">CUSTOMISE</a> 
-              <a class="btn btn-secondary" (click)="addProductToCart(pizza)" role="button">ADD</a></p>
+              <a class="btn btn-secondary btn-yellow" (click)="addProductToCart(pizza)" role="button">ADD</a></p>
           </div>
 
           <div class="col-md-12 category">Our Sides</div>
           <div class="col-lg-4" *ngFor="let s of pizzaDetails.all_products.sides">
             <img class="" src="{{s.image}}" alt="{{s.details}}" width="300" height="300">
             <h4>{{s.name}}</h4>
-            <p>&euro;{{s.price}} <a class="btn btn-secondary" (click)="addProductToCart(s)" role="button">ADD</a></p>
+            <p>&euro;{{s.price}} <a class="btn btn-secondary btn-yellow" (click)="addProductToCart(s)" role="button">ADD</a></p>
           </div>
 
           <div class="col-md-12 category">Our Drinks</div>
           <div class="col-lg-4" *ngFor="let d of pizzaDetails.all_products.drinks">
             <img class="" src="{{d.image}}" alt="{{d.details}}" width="300" height="300">
             <h4>{{d.name}}</h4>
-            <p>&euro;{{d.price}} <a class="btn btn-secondary" (click)="addProductToCart(d)" role="button">ADD</a></p>
+            <p>&euro;{{d.price}} <a class="btn btn-secondary btn-yellow" (click)="addProductToCart(d)" role="button">ADD</a></p>
           </div>
         </div>
       </div>

@@ -49,12 +49,12 @@ def register():
         passw = request.json['password']
 
         if emailid == '' or uname == '' or passw == '':
-            return jsonify(message='Please enter required fields')
+            return jsonify('Please enter required fields')
         else:
             data = useradmintable(email=emailid,username=uname,password=passw)
             db.session.add(data)
             db.session.commit()
-            return jsonify(message='You have registered successfully.')
+            return jsonify('You have registered successfully.')
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -63,12 +63,12 @@ def login():
         passw = request.json['password']
 
         if emailid == '' or passw == '':
-            return jsonify(message='Please enter required fields')
+            return jsonify('Please enter required fields')
         else:
             user = useradmintable.query.filter_by(email=emailid,password=passw).first()
             if user:
                 return user.to_json()
-            return jsonify(message='User not found')
+            return jsonify('User not found')
 
 
 @app.route('/<path:path>')

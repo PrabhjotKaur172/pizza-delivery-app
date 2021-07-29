@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,9 +6,22 @@ import { Router } from '@angular/router';
   templateUrl: './app-header-pizza-delivery.component.html',
   styleUrls: ['./app-header-pizza-delivery.component.css']
 })
-export class AppHeaderPizzaDeliveryComponent{
+export class AppHeaderPizzaDeliveryComponent implements OnInit{
+  userCredentials: any;
 
-  constructor(private router: Router){}
+  constructor(private router: Router){
+    if(JSON.parse(localStorage.getItem('userCredentials') || '[]')){
+      this.userCredentials = JSON.parse(localStorage.getItem('userCredentials') || '[]');
+      console.log("constructor",this.userCredentials);
+    }
+    
+  }
+  ngOnInit(): void {
+    if(JSON.parse(localStorage.getItem('userCredentials') || '[]')){
+      this.userCredentials = JSON.parse(localStorage.getItem('userCredentials') || '[]');
+      console.log("ngOnInit",this.userCredentials);
+    }
+  }
 
     //navigate user to all products page
 openMenuPage() {
@@ -37,6 +50,13 @@ userRegister(){
 
 userLogin(){
   this.router.navigate(['/userLogin/login']);
+}
+
+userLogout(){
+  localStorage.setItem('userCredentials', '');
+  this.ngOnInit();
+  this.router.navigate(['/']);
+ 
 }
 
 }

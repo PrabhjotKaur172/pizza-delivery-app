@@ -9,6 +9,12 @@ body {
   .cursor{
     cursor: pointer;
 }
+.btn-yellow{
+  border: #d4b831;
+  margin-right: 10px;
+  color: white;
+  background-color: #d4b831;
+}
   /* CAROUSEL CSS */
  
   .carousel-caption {

@@ -10,21 +10,21 @@
         <h4>{{pizza.name}}</h4>
         <p>Large 13.5" &euro;{{pizza.price}}</p>
         <p><a (click)="openMenuDetailsPage(pizza)" class="customise cursor">CUSTOMISE</a> 
-          <a class="btn btn-secondary" (click)="addProductToCart(pizza)" role="button">ADD</a></p>
+          <a class="btn btn-secondary btn-yellow" (click)="addProductToCart(pizza)" role="button">ADD</a></p>
       </div>
 
       <div class="col-md-12 category">Our Sides</div>
       <div class="col-lg-4" *ngFor="let s of pizzaDetails.all_products.sides">
         <img class="" src="{{s.image}}" alt="{{s.details}}" width="300" height="300">
         <h4>{{s.name}}</h4>
-        <p>&euro;{{s.price}} <a class="btn btn-secondary" (click)="addProductToCart(s)" role="button">ADD</a></p>
+        <p>&euro;{{s.price}} <a class="btn btn-secondary btn-yellow" (click)="addProductToCart(s)" role="button">ADD</a></p>
       </div>
 
       <div class="col-md-12 category">Our Drinks</div>
       <div class="col-lg-4" *ngFor="let d of pizzaDetails.all_products.drinks">
         <img class="" src="{{d.image}}" alt="{{d.details}}" width="300" height="300">
         <h4>{{d.name}}</h4>
-        <p>&euro;{{d.price}} <a class="btn btn-secondary" (click)="addProductToCart(d)" role="button">ADD</a></p>
+        <p>&euro;{{d.price}} <a class="btn btn-secondary btn-yellow" (click)="addProductToCart(d)" role="button">ADD</a></p>
       </div>
     </div>
   </div>

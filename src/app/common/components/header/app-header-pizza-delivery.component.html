@@ -14,16 +14,22 @@
                   <a class="nav-link cursor" (click)="openCartPage()">Cart</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link cursor" (click)="openAboutPage()">About</a>
+                  <a class="nav-link cursor" (click)="openAboutPage()">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link cursor" (click)="openContactPage()">Contact</a>
+                  <a class="nav-link cursor" (click)="openContactPage()">Contact Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="userCredentials.length == 0">
                   <a type="button" class="btn btn-primary btn-yellow " (click)="userLogin()">Login</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="userCredentials.length == 0">
                   <a type="button" class="btn btn-primary btn-yellow" (click)="userRegister()">Register</a>
+                </li>
+                <li class="nav-link margin-left" href="#" *ngIf="userCredentials.length != 0">
+                  <a>Welcome {{this.userCredentials.username}}!!</a>
+                </li>
+                <li class="nav-item" *ngIf="userCredentials.length != 0">
+                  <a type="button" class="btn btn-primary btn-yellow" (click)="userLogout()">Logout</a>
                 </li>
             </ul>
           </div>
