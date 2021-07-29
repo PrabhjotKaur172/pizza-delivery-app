@@ -1,3 +1,6 @@
 .bg-black {
     background-color: #131517!important;
 }
+.cursor{
+    cursor: pointer;
+}

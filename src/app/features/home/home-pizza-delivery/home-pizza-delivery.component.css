@@ -6,7 +6,9 @@ body {
     color: #5a5a5a;
   }
   
-  
+  .cursor{
+    cursor: pointer;
+}
   /* CAROUSEL CSS */
  
   .carousel-caption {

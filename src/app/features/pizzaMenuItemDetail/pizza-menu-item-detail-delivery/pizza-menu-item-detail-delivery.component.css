@@ -1,0 +1,13 @@
+.margin-top{
+    margin-top: 200px;
+}
+.margin-bottom{
+    margin-bottom: 50px;
+}
+.margin-b-20{
+    margin-bottom: 20px;
+}
+.btn-bg{
+    background-color: black;
+    color: white !important;
+}
