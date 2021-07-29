@@ -35,6 +35,16 @@ const routes: Routes = [{
       path: 'contact',
       loadChildren: () => import('./features/contact/contact-pizza.module').then(m => m.ContactPizzaDeliveryModule)
 
+    },
+    {
+      path: 'user',
+      loadChildren: () => import('./features/register/register.module').then(m => m.UserRegisterModule)
+
+    },
+    {
+      path: 'userLogin',
+      loadChildren: () => import('./features/login/login.module').then(m => m.UserLoginModule)
+
     }
   ]
 },

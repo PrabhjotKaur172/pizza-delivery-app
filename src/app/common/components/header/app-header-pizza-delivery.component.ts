@@ -31,4 +31,12 @@ openContactPage(){
   this.router.navigate(['/contact/contactPizzaDelivery']);
 }
 
+userRegister(){
+  this.router.navigate(['/user/register']);
+}
+
+userLogin(){
+  this.router.navigate(['/userLogin/login']);
+}
+
 }
