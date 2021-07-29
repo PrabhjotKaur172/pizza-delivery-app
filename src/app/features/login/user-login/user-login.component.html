@@ -9,17 +9,17 @@
           </div>
           <div class="row align-items-center">
             <div class="col mt-4">
-              <input type="text" class="form-control" placeholder="User Name">
+              <input type="text" class="form-control" placeholder="User Email" [(ngModel)]="userLoginObject.email">
             </div>
           </div>
           <div class="row align-items-center mt-4">
             <div class="col">
-              <input type="password" class="form-control" placeholder="User Password">
+              <input type="password" class="form-control" placeholder="User Password" [(ngModel)]="userLoginObject.password">
             </div>
           </div>
           <div class="row justify-content-start mt-4">
             <div class="col">
-              <button class="btn btn-primary mt-4">Login</button>
+              <button class="btn btn-primary mt-4" (click)="loginUser(userLoginObject)">Login</button>
             </div>
           </div>
         </div>

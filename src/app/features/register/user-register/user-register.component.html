@@ -9,22 +9,22 @@
           </div>
           <div class="row align-items-center">
             <div class="col mt-4">
-              <input type="text" class="form-control" placeholder="User Name">
+              <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="userRegisterObject.username">
             </div>
           </div>
           <div class="row align-items-center mt-4">
             <div class="col">
-              <input type="email" class="form-control" placeholder="User Email">
+              <input type="email" class="form-control" placeholder="User Email" [(ngModel)]="userRegisterObject.email">
             </div>
           </div>
           <div class="row align-items-center mt-4">
             <div class="col">
-              <input type="password" class="form-control" placeholder="User Password">
+              <input type="password" class="form-control" placeholder="User Password" [(ngModel)]="userRegisterObject.password">
             </div>
           </div>
           <div class="row justify-content-start mt-4">
             <div class="col">
-              <button class="btn btn-primary mt-4">Register</button>
+              <button class="btn btn-primary mt-4" (click)="registerNewUser(userRegisterObject)">Register</button>
             </div>
           </div>
         </div>

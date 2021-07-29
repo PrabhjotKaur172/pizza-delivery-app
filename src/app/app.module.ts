@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +14,8 @@ import { MainComponent } from './main/main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonPizzaDeliveryModule
+    CommonPizzaDeliveryModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
