@@ -2,7 +2,7 @@
   "name": "pizza-delivery-app",
   "version": "0.0.0",
   "engines": {
-    "node": "12.16.0"
+    "node": "12.16.0npm "
   },
   "scripts": {
     "ng": "ng",
