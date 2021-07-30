@@ -46,10 +46,10 @@ export class PizzaMenuItemDetailDeliveryComponent implements OnInit{
   // navigate to add to cart section
   addProductToCart(product : any) {
     this.router.navigate(['/pizzaCart/cart']);
-    let cartData;
+    let cartData: any[] = [];
     if(JSON.parse(localStorage.getItem('pizzasCartObject') || '[]')){
       this.oldCartData = JSON.parse(localStorage.getItem('pizzasCartObject') || '[]');
-      if(this.oldCartData != ''){
+      if(this.oldCartData){
         this.oldCartData.forEach(function (value: any) {
           cartData.push(value);
         });
@@ -60,12 +60,14 @@ export class PizzaMenuItemDetailDeliveryComponent implements OnInit{
     if (this.cart) {
       this.isInCart = this.cart.some((item: any) => item.id === product.id);
     } else {
-      this.cart = [];
+      //this.cart = [];
     }
 
     if (this.isInCart) {
       this.cart.map((item: any) => {
         if (item.id === product.id) {
+          product.selectedSize= product.selectedSize || "Large";
+          product.productQuantities = product.productQuantities || 1;
           if(item.selectedSize === product.selectedSize){
             item.productQuantities += product.productQuantities;
             return item;
@@ -77,6 +79,8 @@ export class PizzaMenuItemDetailDeliveryComponent implements OnInit{
         
       });
     } else {
+      product.selectedSize= product.selectedSize || "Large";
+      product.productQuantities = product.productQuantities || 1;
       this.cart.push(product);
     }
 

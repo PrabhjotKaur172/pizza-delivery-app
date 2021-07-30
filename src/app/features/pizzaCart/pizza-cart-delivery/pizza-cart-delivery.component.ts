@@ -41,7 +41,7 @@ export class PizzaCartDeliveryComponent implements OnInit {
   removeProductFromCart(currentItem : any){
     let updatedCartItems = this.itemsAddedInCart;
     this.itemsAddedInCart.forEach(function (value : any,index : any) {
-      if(value.product_id === currentItem.product_id){
+      if(value.id === currentItem.id){
         if(value.selectedSize === currentItem.selectedSize){
           updatedCartItems.splice(index, 1);
         }

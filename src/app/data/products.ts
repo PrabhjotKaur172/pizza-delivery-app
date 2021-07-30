@@ -53,7 +53,7 @@ export const productsData = {
 
           "sides" : [
             {
-              "id" : "1",
+              "id" : "8",
               "name" : "Vegan Nuggets",
               "details" : "This is a Vegan Nuggets",
               "rating" : "4",
@@ -61,7 +61,7 @@ export const productsData = {
               "image" : "./../../../../assets/images/vegan_nuggets.PNG"
             },
             {
-              "id" : "2",
+              "id" : "9",
               "name" : "Garlic Pizza Bread",
               "details" : "This is a Garlic Pizza Bread",
               "rating" : "4",
@@ -69,7 +69,7 @@ export const productsData = {
               "image" : "./../../../../assets/images/garlic_pizza_bread.PNG"
             },
             {
-              "id" : "3",
+              "id" : "10",
               "name" : "Garlic Dippers",
               "details" : "This is a Garlic Dippers",
               "rating" : "4",
@@ -77,7 +77,7 @@ export const productsData = {
               "image" : "./../../../../assets/images/garlic_dippers.PNG"
             },
             {
-              "id" : "4",
+              "id" : "11",
               "name" : "Potato Wedges",
               "details" : "This is a Potato Wedges",
               "rating" : "4",
@@ -90,33 +90,33 @@ export const productsData = {
           
           "drinks" : [
             {
-              "id" : "1",
+              "id" : "12",
               "name" : "Coca Cola Classic",
-              "details" : "This is an italian pizza",
+              "details" : "This is a Coca Cola Classic",
               "rating" : "4",
               "price" : "2.75",
               "image" : "./../../../../assets/images/coca_cola.PNG"
             },
             {
-              "id" : "1",
+              "id" : "13",
               "name" : "Diet Coke",
-              "details" : "This is an italian pizza",
+              "details" : "This is a Diet Coke",
               "rating" : "4",
               "price" : "2.50",
               "image" : "./../../../../assets/images/diet_coke.PNG"
             },
             {
-              "id" : "1",
+              "id" : "14",
               "name" : "Sprite",
-              "details" : "This is an italian pizza",
+              "details" : "This is a sprite",
               "rating" : "4",
               "price" : "2.50",
               "image" : "./../../../../assets/images/sprite.PNG"
             },
             {
-              "id" : "1",
+              "id" : "15",
               "name" : "Fanta",
-              "details" : "This is an italian pizza",
+              "details" : "This is a Fanta",
               "rating" : "4",
               "price" : "2.50",
               "image" : "./../../../../assets/images/fanta.PNG"
