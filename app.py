@@ -4,7 +4,7 @@ from flask import jsonify
 from flask import request
 from flask_cors import CORS
 
-app = Flask(__name__, static_url_path='', static_folder='dist')
+app = Flask(__name__, static_url_path='', static_folder='dist/pizza-delivery-app')
 CORS(app)
 
 ENV = 'prod'
