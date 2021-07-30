@@ -35,5 +35,5 @@
         </div>
 
         <div *ngIf="itemsAddedInCart && itemsAddedInCart.length != 0"> 
-            <a class="btn float-right no-text-decoration" (click)="buyProducts(itemsAddedInCart)">Order</a></div>
+            <a class="btn float-right no-text-decoration" [href]="genuineUrl">Order</a></div>
     </div> 

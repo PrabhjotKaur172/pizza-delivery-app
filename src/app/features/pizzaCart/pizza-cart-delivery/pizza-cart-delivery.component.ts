@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,12 +11,15 @@ export class PizzaCartDeliveryComponent implements OnInit {
 
   public itemsAddedInCart: any;
   public sumTotal: any;
+  public untrustedUrl: any;
+  public genuineUrl: any;
   
-  constructor(private router: Router){
-    
+  constructor(private router: Router,
+    public sanitizer: DomSanitizer){
+      this.untrustedUrl = "javascript:alert('The order has been placed!!')";
+      this.genuineUrl = this.sanitizer.bypassSecurityTrustUrl(this.untrustedUrl);
   }
   ngOnInit(){
-    //this.itemsAddedInCart = [];
     this.itemsAddedInCart =  JSON.parse(localStorage.getItem('pizzasCartObject') || '[]');
                               
     this.sumTotalOfProducts();
@@ -31,12 +35,6 @@ export class PizzaCartDeliveryComponent implements OnInit {
  
      }
   }
-  //navigate user to the product's details page
-  buyProducts(products : any) {
-   // this.router.navigate(['/orderDetails/buyProducts'],{ state: { totalItemsInOrder: products } });
-   alert("The order has been placed !!")
-  }
-
   // remove item from the cart
   removeProductFromCart(currentItem : any){
     let updatedCartItems = this.itemsAddedInCart;
